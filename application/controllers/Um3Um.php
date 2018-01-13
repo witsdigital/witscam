@@ -141,7 +141,7 @@ class Um3Um extends CI_Controller {
             $descricao = substr($arquivo[$i], 104, 1000);
             $credor = substr($arquivo[$i], 1104, 150);
             $doc = substr($arquivo[$i], 1254, 18);
-
+ 
             $valor = substr($arquivo[$i], 1272, 21);
             $funcao = substr($arquivo[$i], 1293, 150);
             $subfuncao = substr($arquivo[$i], 1443, 150);
