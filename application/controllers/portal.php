@@ -59,7 +59,7 @@ $data['entidade'] = 'condeuba';
         $data['entidade'] = 'condeuba';
         $this->load->model('tv_camara_model');
 
-        $data['video'] = $this->tv_camara_model->getall();
+        $data['video'] = $this->tv_camara_model->getall2();
         $this->load->view('cidades/includes/imports');
         $this->load->view('/cidades/includes/header',$data);
 

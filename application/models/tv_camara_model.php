@@ -31,6 +31,11 @@ class tv_camara_model extends CI_Model {
         $query = $this->db->query("select * from tv_camara where entidade = " . $this->session->userdata('entidade')." order by id desc ");
         return $query->result();
     }
+	
+	public function getall2() {
+        $query = $this->db->query("select * from tv_camara where entidade = 7 order by id desc ");
+        return $query->result();
+    }
     public function update($obj,$id) {
         $this->db->where('id', $id);
          $this->db->where('entidade',  $this->session->userdata('entidade'));
