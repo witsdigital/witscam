@@ -127,6 +127,8 @@
                             <ul class="treeview-menu">
 
                                 <li><a href="<?= base_url() ?>noticia"><i class="fa fa-circle-o"></i> Notícias</a></li>
+                                <li><a href="<?= base_url() ?>galeria"><i class="fa fa-circle-o"></i> Galeria</a></li>
+                                <li><a href="<?= base_url() ?>tv_camara"><i class="fa fa-circle-o"></i> TV Camara</a></li>
                                 <li><a href="<?= base_url() ?>aviso"><i class="fa fa-circle-o"></i> Avisos</a></li>
                                 
                             </ul>

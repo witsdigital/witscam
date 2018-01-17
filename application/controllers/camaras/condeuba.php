@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Condeuba extends CI_Controller {
 
     public function index() {
-
+        
         $this->load->view('cidades/includes/imports');
         $this->load->view('cidades/includes/header');
         $this->load->view('cidades/home');
@@ -13,22 +13,24 @@ class Condeuba extends CI_Controller {
     }
 
     public function publicacoes() {
-        
+        $data['entidade'] = 'condeuba';
          $entidade = "7";
         $this->load->model('publicacoes_portal');
         $data['publicadas']=$this->publicacoes_portal->getpublicadas($entidade);
         
         $this->load->view('cidades/includes/imports');
-        $this->load->view('/cidades/includes/header');
+        $this->load->view('/cidades/includes/header',$data);
         $this->load->view('cidades/publicacoes',$data);
         $this->load->view('cidades/includes/footer');
     }
      public function get($tipo) {
+          $data['entidade'] = 'condeuba';
+      
            $entidade = "7";
         $this->load->model('publicacoes_portal');
         $data['publicadas'] = $this->publicacoes_portal->getpublicadas_tipo($entidade,$tipo);
         $this->load->view('cidades/includes/imports');
-        $this->load->view('/cidades/includes/header');
+        $this->load->view('/cidades/includes/header',$data);
         $this->load->view('cidades/publicacoes',$data);
         $this->load->view('cidades/includes/footer');
         
@@ -36,6 +38,7 @@ class Condeuba extends CI_Controller {
     }
   
       public function getbusca($tipo = NULL,$dado) {
+          
      $entidade = "7";
      
         

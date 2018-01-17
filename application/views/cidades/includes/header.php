@@ -1,5 +1,4 @@
 
-<?php $entidade = $this->uri->segment(2);?>
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8"/>
@@ -37,7 +36,7 @@
 	<header class="header">
 		<div class="container">
 			<div class="logo">
-				<a href="<?=  base_url()?>camaras/<?php echo $entidade?>">
+				<a href="<?=  base_url()?>camaras/condeuba">
 					<img src="<?=  base_url()?>assets/images/logo.png" alt="BuildPress" class="img-responsive"/>
 				</a>
 			</div>
@@ -46,7 +45,7 @@
 					<div class="icon-box">
 						<i class="fa  fa-phone  fa-3x"></i>
 						<div class="icon-box__text">
-							<h1 class="icon-box__title">CÂMARA MUNICIPAL DE <?php echo strtoupper ( $entidade) ?></h1>
+							<h1 class="icon-box__title">CÂMARA MUNICIPAL DE CONDEÚBA</h1>
 							
 						</div>
 					</div>
@@ -73,21 +72,22 @@
 			<div class="navigation">
 				<div class="collapse  navbar-collapse" id="buildpress-navbar-collapse">
 					<ul id="menu-main-menu" class="navigation--main">
-						<li class="current-menu-item"><a href="<?=  base_url('camaras/'.$entidade)?>">HOME</a></li>
-						<li><a href="#">NOTÍCIAS</a></li>
+						<li class="current-menu-item"><a href="<?=  base_url()?>">HOME</a></li>
+						<li><a href="<?=  base_url()?>portal/noticias">NOTÍCIAS</a></li>
+						<li><a href="#">VEREADORES</a></li>
 
 						
 						<li class="menu-item-has-children">
 							<a href="#">UTILIDADES</a>
 							<ul class="sub-menu">
 								<li><a href="#">A CIDADE</a></li>
-								<li><a href="#">VERADORES</a></li>
+								<li><a href="<?=  base_url()?>portal/tvcamara">TV CAMARA</a></li>
+								<li><a href="<?=  base_url()?>portal/galerias">GALERIA</a></li>
 								
-								<li><a href="#">All Services</a></li>
 							</ul>
 						</li>
-                                                <li><a href="<?=  base_url('camaras/'.$entidade)?>/publicacoes">PUBLICAÇÕES</a></li>
-						<li><a href="#">LOCALIZAÇÃO</a></li>
+                                                <li><a href="<?=  base_url()?>portal/publicacoes">PUBLICAÇÕES</a></li>
+						<li><a href="<?=  base_url()?>portal/contato">CONTATO</a></li>
 			
 					</ul>	
 				</div>

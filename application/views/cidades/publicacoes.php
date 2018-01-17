@@ -4,20 +4,20 @@
     function enviardados() {
          if (document.getElementById('data').value != "") {
             var data = document.getElementById('data').value;
-            document.location.href = "<?= base_url('camaras/' . $entidade) ?>/buscadata/" + data;
+            document.location.href = "<?= base_url() ?>portal/buscadata/" + data;
         }
 
         if (document.getElementById('edicao').value != "") {
             var edicao = document.getElementById('edicao').value;
-            document.location.href = "<?= base_url('camaras/' . $entidade) ?>/getbusca/edicao/" + edicao;
+            document.location.href = "<?= base_url() ?>portal/getbusca/edicao/" + edicao;
         }
         if (document.getElementById('titulo').value != "") {
             var titulo = document.getElementById('titulo').value;
-            document.location.href = "<?= base_url('camaras/' . $entidade) ?>/buscatitulo/" + titulo;
+            document.location.href = "<?= base_url() ?>portal/buscatitulo/" + titulo;
         }
         if (document.getElementById('chave').value != "") {
             var chave = document.getElementById('chave').value;
-            document.location.href = "<?= base_url('camaras/' . $entidade) ?>/busca/" + chave;
+            document.location.href = "<?= base_url() ?>portal/busca/" + chave;
         }
 
 
@@ -90,11 +90,11 @@
                                                                         $ent2 = $ent->result();
 
                                                                         foreach ($tipo->result() as $rowtipo) {
-                                                                            $query = $this->db->query('SELECT * FROM publicadas WHERE entidade ="' . $ent2[0]->id . '" AND tipo ="' . $rowtipo->nome . '" ');
+                                                                            $query = $this->db->query('SELECT * FROM publicadas WHERE entidade ="7" AND tipo ="' . $rowtipo->nome . '" ');
                                                                             $total = $query->num_rows();
                                                                             ?>
 
-                                                                            <li><a href="<?php echo base_url('camaras/' . $entidade).'/get/'. tirarAcentos($rowtipo->nome) ?>"><?php echo $rowtipo->nome; ?><div><span  >    <?php echo "( " . $total . " ) "; ?></span><a href="#" title="4 topics" style="font-size: 8pt;">Arquivos</a></div></a></li>
+                                                                            <li><a href="<?php echo base_url().'portal/get/'. tirarAcentos($rowtipo->nome) ?>"><?php echo $rowtipo->nome; ?><div><span  >    <?php echo "( " . $total . " ) "; ?></span><a href="#" title="4 topics" style="font-size: 8pt;">Arquivos</a></div></a></li>
 
                                                                             <?php
                                                                         }

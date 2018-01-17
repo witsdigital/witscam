@@ -161,6 +161,7 @@ if($this->session->userdata('permissao') == 'administrador'){
         $data['keyarquivo'] = $this->updoc($dados[0]->entidade, $dados[0]->data);
         $data['entidade'] = $dados[0]->entidade;
          $data['status'] = 1;
+           $data['local'] = 1;
 
 
          $this->load->model('publicadas');

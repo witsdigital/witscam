@@ -180,7 +180,7 @@ class Publicacoes extends CI_Controller {
         $key = $entidade . $protocolo;
         $data['keyarquivo'] = $key;
 
-
+ $data['status'] = 0;
 
 
         $data['entidade'] = $this->session->userdata('entidade');

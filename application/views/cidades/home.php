@@ -1,5 +1,5 @@
 
-	   <?php $entidade = $this->uri->segment(2);?>
+	   <?php $entidade = 'condeuba';?>
 	<div class="jumbotron  jumbotron--with-captions">
 		<div class="carousel  slide  js-jumbotron-slider" id="headerCarousel" data-interval="5000">
 			<!-- Wrapper for slides -->
